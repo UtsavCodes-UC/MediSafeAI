@@ -1,0 +1,4841 @@
+[
+    {
+        "itemA": "Paracetamol",
+        "itemA_synonyms": [
+            "Acetaminophen",
+            "Tylenol",
+            "Para"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol",
+            "Beer",
+            "Wine"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Both affect liver leading to toxicity",
+        "effects": [
+            "Liver damage",
+            "Nausea"
+        ],
+        "recommendation": "Avoid alcohol while taking Paracetamol",
+        "riskFactors": [
+            {
+                "condition": "liver disease",
+                "extraScore": 3
+            },
+            {
+                "condition": "alcoholism",
+                "extraScore": 2
+            }
+        ]
+    },
+    {
+        "itemA": "Ibuprofen",
+        "itemA_synonyms": [
+            "Advil"
+        ],
+        "itemB": "Aspirin",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 5,
+        "mechanism": "Both increase risk of bleeding",
+        "effects": [
+            "Stomach bleeding"
+        ],
+        "recommendation": "Use under medical supervision",
+        "riskFactors": [
+            {
+                "condition": "liver disease",
+                "extraScore": 3
+            },
+            {
+                "condition": "alcoholism",
+                "extraScore": 2
+            }
+        ]
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    },
+    {
+        "itemA": "Lisinopril",
+        "itemA_synonyms": [
+            "Prinivil",
+            "Zestril"
+        ],
+        "itemB": "Banana",
+        "itemB_synonyms": [
+            "Potassium-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "ACE inhibitors increase potassium retention",
+        "effects": [
+            "Hyperkalemia",
+            "Arrhythmia"
+        ],
+        "recommendation": "Monitor potassium intake"
+    },
+    {
+        "itemA": "Enalapril",
+        "itemA_synonyms": [
+            "Vasotec"
+        ],
+        "itemB": "Potassium supplements",
+        "itemB_synonyms": [
+            "Potassium tablets",
+            "K supplements"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive potassium retention",
+        "effects": [
+            "Hyperkalemia"
+        ],
+        "recommendation": "Avoid combination or monitor levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Furosemide",
+        "itemB_synonyms": [
+            "Lasix"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Diuretic-induced hypokalemia increases digoxin toxicity",
+        "effects": [
+            "Arrhythmia",
+            "Nausea"
+        ],
+        "recommendation": "Monitor potassium and digoxin levels"
+    },
+    {
+        "itemA": "Digoxin",
+        "itemA_synonyms": [
+            "Lanoxin"
+        ],
+        "itemB": "Verapamil",
+        "itemB_synonyms": [
+            "Calan",
+            "Isoptin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
+        "effects": [
+            "Toxicity",
+            "Bradycardia"
+        ],
+        "recommendation": "Dose adjustment required"
+    },
+    {
+        "itemA": "Rifampin",
+        "itemA_synonyms": [
+            "Rifadin"
+        ],
+        "itemB": "Oral contraceptives",
+        "itemB_synonyms": [
+            "Birth control pills"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP450 induction reduces contraceptive effectiveness",
+        "effects": [
+            "Unintended pregnancy"
+        ],
+        "recommendation": "Use alternative contraception"
+    },
+    {
+        "itemA": "Fluoxetine",
+        "itemA_synonyms": [
+            "Prozac"
+        ],
+        "itemB": "Tramadol",
+        "itemB_synonyms": [
+            "Ultram"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive serotonergic activity",
+        "effects": [
+            "Serotonin syndrome"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Phenelzine",
+        "itemA_synonyms": [
+            "Nardil"
+        ],
+        "itemB": "Cheese",
+        "itemB_synonyms": [
+            "Tyramine-rich food"
+        ],
+        "type": "drug-food",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Tyramine accumulation causes hypertensive crisis",
+        "effects": [
+            "Severe hypertension"
+        ],
+        "recommendation": "Avoid tyramine-rich foods"
+    },
+    {
+        "itemA": "Lithium",
+        "itemA_synonyms": [
+            "Lithobid"
+        ],
+        "itemB": "Ibuprofen",
+        "itemB_synonyms": [
+            "Advil",
+            "Motrin"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Reduced renal clearance of lithium",
+        "effects": [
+            "Lithium toxicity"
+        ],
+        "recommendation": "Avoid or monitor levels"
+    },
+    {
+        "itemA": "Prednisone",
+        "itemA_synonyms": [
+            "Deltasone"
+        ],
+        "itemB": "NSAIDs",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 8,
+        "mechanism": "Additive GI toxicity",
+        "effects": [
+            "Ulcers",
+            "Bleeding"
+        ],
+        "recommendation": "Use cautiously"
+    },
+    {
+        "itemA": "Clonazepam",
+        "itemA_synonyms": [
+            "Klonopin"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive CNS depression",
+        "effects": [
+            "Respiratory depression"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "St. John's Wort",
+        "itemA_synonyms": [
+            "Hypericum"
+        ],
+        "itemB": "Cyclosporine",
+        "itemB_synonyms": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "type": "drug-drug",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "CYP3A4 induction reduces drug levels",
+        "effects": [
+            "Organ rejection"
+        ],
+        "recommendation": "Avoid combination"
+    },
+    {
+        "itemA": "Doxycycline",
+        "itemA_synonyms": [
+            "Vibramycin"
+        ],
+        "itemB": "Antacids",
+        "itemB_synonyms": [],
+        "type": "drug-drug",
+        "severity": "medium",
+        "baseScore": 6,
+        "mechanism": "Chelation reduces absorption",
+        "effects": [
+            "Reduced efficacy"
+        ],
+        "recommendation": "Separate dosing"
+    },
+    {
+        "itemA": "Codeine",
+        "itemA_synonyms": [
+            "Codeine sulfate"
+        ],
+        "itemB": "Alcohol",
+        "itemB_synonyms": [
+            "Ethanol"
+        ],
+        "type": "drug-drink",
+        "severity": "high",
+        "baseScore": 9,
+        "mechanism": "Additive respiratory depression",
+        "effects": [
+            "Overdose risk"
+        ],
+        "recommendation": "Avoid alcohol"
+    }
+]
