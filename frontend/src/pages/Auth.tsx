@@ -16,7 +16,13 @@ const Auth = () => {
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
       if (data.session) {
-        navigate("/dashboard");
+        const personalDetails = localStorage.getItem("personalDetails");
+
+        if (personalDetails) {
+          navigate("/dashboard");
+        } else {
+          navigate("/personal-details");
+        }
       }
     });
   }, []);
@@ -35,7 +41,14 @@ const Auth = () => {
         toast.error(error.message);
       } else {
         toast.success("Logged in successfully!");
-        navigate("/dashboard");
+
+        const personalDetails = localStorage.getItem("personalDetails");
+
+        if (personalDetails) {
+          navigate("/dashboard");
+        } else {
+          navigate("/personal-details");
+        }
       }
     } else {
       // SIGN UP
@@ -56,6 +69,9 @@ const Auth = () => {
   const handleGoogleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
+      options: {
+        redirectTo: "http://localhost:8080/auth",
+      },
     });
 
     if (error) {

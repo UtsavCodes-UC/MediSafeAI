@@ -42,11 +42,11 @@ const Index = () => (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mx-auto mt-10 flex max-w-lg items-center gap-2 rounded-xl border justify-center bg-card p-2 text-justify shadow-lg"
+          className="mx-auto mt-10 flex justify-center"
         >
           <Link
             to="/checker"
-            className="rounded-lg bg-primary px-5 py-2.5 font-semibold text-sm text-primary-foreground transition-colors hover:bg-primary/90"
+            className="rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-3 font-semibold text-sm text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/30"
           >
             Start Checking
           </Link>

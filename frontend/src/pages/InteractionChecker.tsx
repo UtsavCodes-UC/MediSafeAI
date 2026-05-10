@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Plus, AlertTriangle, CheckCircle, Info } from "lucide-react";
 import Layout from "@/components/Layout";
-
+import interactionData from "@/data/interactions.json";
 const severityConfig = {
   Low: { color: "bg-severity-low/10 text-severity-low border-severity-low/30", icon: CheckCircle },
   Medium: { color: "bg-severity-medium/10 text-severity-medium border-severity-medium/30", icon: Info },
@@ -11,16 +11,14 @@ const severityConfig = {
 } as const;
 
 const suggestionsList = [
-  "Paracetamol",
-  "Ibuprofen",
-  "Aspirin",
-  "Alcohol",
-  "Warfarin",
-  "Metformin",
-  "Lisinopril",
-  "Vitamin B12",
-  "Milk",
-  "Antibiotics",
+  ...new Set(
+    interactionData.flatMap((item) => [
+      item.itemA,
+      item.itemB,
+      ...(item.itemA_synonyms || []),
+      ...(item.itemB_synonyms || []),
+    ])
+  ),
 ];
 
 const InteractionChecker = () => {
@@ -28,7 +26,7 @@ const InteractionChecker = () => {
   const [input, setInput] = useState("");
   const [results, setResults] = useState<any[] | null>(null);
   const [suggestions, setSuggestions] = useState<string[]>([]);
-
+  const [loading, setLoading] = useState(false);
   const addItem = (value?: string) => {
     const trimmed = (value || input).trim();
     if (trimmed && !items.includes(trimmed)) {
@@ -57,7 +55,7 @@ const InteractionChecker = () => {
 
   const checkInteractions = async () => {
     if (items.length < 2) return;
-
+    setLoading(true);
     try {
       const res = await fetch("http://localhost:5000/api/interactions/check", {
         method: "POST",
@@ -101,6 +99,8 @@ const InteractionChecker = () => {
 
     } catch (error) {
       console.error("Error fetching interactions:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -138,12 +138,12 @@ const InteractionChecker = () => {
             </button>
 
             {suggestions.length > 0 && (
-              <div className="absolute top-12 left-0 w-full rounded-lg border bg-white shadow-md z-10">
+              <div className="absolute top-12 left-0 w-full rounded-lg border bg-card shadow-md z-10">
                 {suggestions.map((s) => (
                   <div
                     key={s}
                     onClick={() => addItem(s)}
-                    className="px-4 py-2 text-sm cursor-pointer hover:bg-muted"
+                    className="px-4 py-2 text-sm cursor-pointer hover:bg-muted/50"
                   >
                     {s}
                   </div>
@@ -154,10 +154,17 @@ const InteractionChecker = () => {
 
           <button
             onClick={checkInteractions}
-            disabled={items.length < 2}
-            className="mt-4 w-full rounded-lg bg-primary py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
+            disabled={items.length < 2 || loading}
+            className="mt-4 w-full rounded-lg bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Check Interactions
+            {loading ? (
+              <span className="flex items-center justify-center gap-2">
+                <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
+                Checking...
+              </span>
+            ) : (
+              "Check Interactions"
+            )}
           </button>
         </div>
 
@@ -207,13 +214,12 @@ const InteractionChecker = () => {
                     {/* Progress Bar */}
                     <div className="mt-2 h-2 w-full rounded bg-muted">
                       <div
-                        className={`h-2 rounded ${
-                          r.severity === "High"
-                            ? "bg-red-500"
-                            : r.severity === "Medium"
+                        className={`h-2 rounded ${r.severity === "High"
+                          ? "bg-red-500"
+                          : r.severity === "Medium"
                             ? "bg-yellow-500"
                             : "bg-green-500"
-                        }`}
+                          }`}
                         style={{ width: `${Math.min(r.score * 8, 100)}%` }}
                       />
                     </div>

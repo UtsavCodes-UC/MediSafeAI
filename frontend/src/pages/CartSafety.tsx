@@ -96,8 +96,8 @@ const CartSafety = () => {
           i.severity === "high"
             ? "High"
             : i.severity === "medium"
-            ? "Medium"
-            : "Low",
+              ? "Medium"
+              : "Low",
         explanation: i.mechanism || i.effects?.join(", "),
         alternative: i.recommendation || "Consult doctor",
       }));
@@ -138,12 +138,12 @@ const CartSafety = () => {
 
           {/* Suggestions */}
           {suggestions.length > 0 && (
-            <div className="absolute top-12 left-0 w-full rounded-lg border bg-white shadow-md z-10">
+            <div className="absolute top-12 left-0 w-full rounded-lg border bg-card shadow-md z-10">
               {suggestions.map((s) => (
                 <div
                   key={s}
                   onClick={() => addItem(s)}
-                  className="px-4 py-2 text-sm cursor-pointer hover:bg-muted"
+                  className="px-4 py-2 text-sm cursor-pointer hover:bg-muted/50"
                 >
                   {s}
                 </div>
@@ -189,21 +189,19 @@ const CartSafety = () => {
                   key={i}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className={`rounded-xl border p-5 ${
-                    c.severity === "High"
+                  className={`rounded-xl border p-5 ${c.severity === "High"
                       ? "bg-severity-high/10 border-severity-high/30"
                       : c.severity === "Medium"
-                      ? "bg-severity-medium/10 border-severity-medium/30"
-                      : "bg-severity-low/10 border-severity-low/30"
-                  }`}
+                        ? "bg-severity-medium/10 border-severity-medium/30"
+                        : "bg-severity-low/10 border-severity-low/30"
+                    }`}
                 >
-                  <div className={`flex items-center gap-2 font-semibold ${
-                    c.severity === "High"
+                  <div className={`flex items-center gap-2 font-semibold ${c.severity === "High"
                       ? "text-severity-high"
                       : c.severity === "Medium"
-                      ? "text-severity-medium"
-                      : "text-severity-low"
-                  }`}>
+                        ? "text-severity-medium"
+                        : "text-severity-low"
+                    }`}>
                     <AlertTriangle className="h-5 w-5" />
                     {c.severity} Risk
                   </div>

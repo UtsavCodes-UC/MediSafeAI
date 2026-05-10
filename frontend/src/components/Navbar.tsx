@@ -115,7 +115,13 @@ const Navbar = () => {
                   <p className="text-xs px-2 py-1 text-muted-foreground truncate">
                     {user.email}
                   </p>
-
+                  <Link
+                    to="/profile"
+                    onClick={() => setOpen(false)}
+                    className="block w-full rounded-md px-2 py-2 text-sm hover:bg-muted"
+                  >
+                    Profile
+                  </Link>
                   <button
                     onClick={async () => {
                       await supabase.auth.signOut();

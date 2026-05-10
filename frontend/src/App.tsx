@@ -12,7 +12,7 @@ import Profile from "./pages/Profile";
 import CartSafety from "./pages/CartSafety";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
-
+import PersonalDetails from "./pages/PersonalDetails";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient();
@@ -50,6 +50,14 @@ const App = () => (
             element={
               <ProtectedRoute>
                 <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/personal-details"
+            element={
+              <ProtectedRoute>
+                <PersonalDetails />
               </ProtectedRoute>
             }
           />
