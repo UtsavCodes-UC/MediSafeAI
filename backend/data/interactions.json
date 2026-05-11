@@ -595,26 +595,6 @@
         "recommendation": "Monitor potassium and digoxin levels"
     },
     {
-        "itemA": "Digoxin",
-        "itemA_synonyms": [
-            "Lanoxin"
-        ],
-        "itemB": "Verapamil",
-        "itemB_synonyms": [
-            "Calan",
-            "Isoptin"
-        ],
-        "type": "drug-drug",
-        "severity": "high",
-        "baseScore": 8,
-        "mechanism": "Increases digoxin levels via P-glycoprotein inhibition",
-        "effects": [
-            "Toxicity",
-            "Bradycardia"
-        ],
-        "recommendation": "Dose adjustment required"
-    },
-    {
         "itemA": "Rifampin",
         "itemA_synonyms": [
             "Rifadin"

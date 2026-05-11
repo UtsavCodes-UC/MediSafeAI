@@ -19,7 +19,7 @@ connectDB().then(async () => {
   initializeFuzzy(drugList);
 
   console.log("Fuzzy search initialized");
-  console.log("Drug Map Sample:", Object.entries(drugList).slice(0, 10));
+  console.log("Drug Map Sample:", Object.entries(drugList).slice(0, 100));
 });
 
 app.get("/", (req, res) => {
