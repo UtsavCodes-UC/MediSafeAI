@@ -78,8 +78,8 @@ const Report = () => {
               score >= 9
                 ? "High"
                 : score >= 5
-                ? "Medium"
-                : "Low",
+                  ? "Medium"
+                  : "Low",
 
             pair: `${i.itemA} + ${i.itemB}`,
 
@@ -166,105 +166,485 @@ const Report = () => {
 
     const doc = new jsPDF();
 
-    let y = 12;
+    const pageWidth = doc.internal.pageSize.width;
 
-    doc.setFontSize(20);
-    doc.text("MediSafe AI - Personalized Report", 10, y);
+    let y = 20;
 
-    y += 12;
+    // ================= HEADER =================
+    doc.setFillColor(15, 23, 42);
+    doc.rect(0, 0, pageWidth, 35, "F");
 
-    doc.setFontSize(12);
+    doc.setTextColor(255, 255, 255);
+
+    doc.setFontSize(24);
+    doc.setFont("helvetica", "bold");
 
     doc.text(
-      `Patient: ${report.user.name || "User"}`,
-      10,
-      y
+      "MediSafe AI",
+      14,
+      18
     );
 
-    y += 7;
+    doc.setFontSize(11);
+
+    doc.setFont("helvetica", "normal");
+
+    doc.text(
+      "Personalized Drug Interaction Report",
+      14,
+      27
+    );
+
+    y = 48;
+
+    // ================= USER INFO CARD =================
+    doc.setFillColor(248, 250, 252);
+
+    doc.roundedRect(
+      12,
+      y,
+      186,
+      32,
+      4,
+      4,
+      "F"
+    );
+
+    doc.setTextColor(30, 41, 59);
+
+    doc.setFontSize(14);
+    doc.setFont("helvetica", "bold");
+
+    doc.text("Patient Information", 18, y + 10);
+
+    doc.setFontSize(11);
+    doc.setFont("helvetica", "normal");
+
+    doc.text(
+      `Name: ${report.user.name || "User"}`,
+      18,
+      y + 20
+    );
 
     doc.text(
       `Age: ${report.user.age || "-"}`,
-      10,
-      y
+      90,
+      y + 20
     );
 
-    y += 7;
-
     doc.text(
-      `Conditions: ${
-        report.user.conditions?.join(", ") || "None"
+      `Conditions: ${report.user.conditions?.join(", ") || "None"
       }`,
-      10,
-      y
+      18,
+      y + 28
     );
 
-    y += 10;
+    y += 45;
 
-    doc.text(generateSummary(), 10, y);
 
-    y += 10;
+    // ================= RISK SCORE =================
+    doc.setTextColor(15, 23, 42);
+
+    doc.setFont("helvetica", "bold");
+
+    doc.setFontSize(16);
 
     doc.text(
-      `Overall Risk Score: ${report.riskScore}/100`,
-      10,
+      "Overall Risk Score",
+      14,
       y
     );
 
-    y += 14;
+    doc.setFontSize(28);
 
+    doc.setTextColor(
+      report.riskScore >= 70
+        ? 220
+        : report.riskScore >= 40
+          ? 234
+          : 34,
+
+      report.riskScore >= 70
+        ? 38
+        : report.riskScore >= 40
+          ? 179
+          : 197,
+
+      report.riskScore >= 70
+        ? 38
+        : report.riskScore >= 40
+          ? 8
+          : 94
+    );
+
+    doc.text(
+      `${report.riskScore}/100`,
+      14,
+      y + 15
+    );
+
+    // Progress bar background
+    doc.setFillColor(226, 232, 240);
+
+    doc.roundedRect(
+      14,
+      y + 24,
+      180,
+      6,
+      3,
+      3,
+      "F"
+    );
+
+    // Progress fill
+    doc.setFillColor(
+      report.riskScore >= 70
+        ? 239
+        : report.riskScore >= 40
+          ? 234
+          : 34,
+
+      report.riskScore >= 70
+        ? 68
+        : report.riskScore >= 40
+          ? 179
+          : 197,
+
+      report.riskScore >= 70
+        ? 68
+        : report.riskScore >= 40
+          ? 8
+          : 94
+    );
+
+    doc.roundedRect(
+      14,
+      y + 24,
+      (report.riskScore / 100) * 180,
+      6,
+      3,
+      3,
+      "F"
+    );
+
+    y += 45;
+
+    // ================= INTERACTIONS =================
     report.findings.forEach((f: any) => {
-      doc.setFontSize(13);
 
-      doc.text(
-        `${f.severity} - ${f.pair}`,
-        10,
-        y
+      if (y > 240) {
+        doc.addPage();
+        y = 20;
+      }
+
+      // Card Background
+      doc.setFillColor(255, 255, 255);
+
+      doc.roundedRect(
+        12,
+        y,
+        186,
+        55,
+        4,
+        4,
+        "F"
       );
 
-      y += 7;
+      // Severity Color
+      const severityColor =
+        f.severity === "High"
+          ? [239, 68, 68]
+          : f.severity === "Medium"
+            ? [234, 179, 8]
+            : [34, 197, 94];
+
+      doc.setFillColor(
+        severityColor[0],
+        severityColor[1],
+        severityColor[2]
+      );
+
+      doc.roundedRect(
+        12,
+        y,
+        6,
+        55,
+        2,
+        2,
+        "F"
+      );
+
+      // Heading
+      doc.setTextColor(15, 23, 42);
+
+      doc.setFontSize(14);
+
+      doc.setFont("helvetica", "bold");
+
+      doc.text(
+        `${f.severity} Severity`,
+        24,
+        y + 10
+      );
 
       doc.setFontSize(11);
 
-      const splitText = doc.splitTextToSize(
-        f.detail,
-        180
+      doc.setFont("helvetica", "normal");
+
+      doc.text(
+        f.pair,
+        24,
+        y + 18
       );
 
-      doc.text(splitText, 10, y);
+      // Score
+      doc.setFont("helvetica", "bold");
 
-      y += splitText.length * 6;
+      doc.text(
+        `Score: ${f.score}`,
+        160,
+        y + 10
+      );
 
-      if (f.aiExplanation?.length > 0) {
-        f.aiExplanation.forEach((point: string) => {
-          const bullet = `• ${point}`;
+      // Explanation
+      doc.setFont("helvetica", "normal");
 
-          const splitBullet =
-            doc.splitTextToSize(
+      const splitDetail =
+        doc.splitTextToSize(
+          f.detail,
+          160
+        );
+
+      doc.text(
+        splitDetail,
+        24,
+        y + 30
+      );
+
+      let currentY =
+        y + 30 + splitDetail.length * 5;
+
+      // AI Explanation
+      if (
+        f.aiExplanation &&
+        f.aiExplanation.length > 0
+      ) {
+
+        doc.setFont(
+          "helvetica",
+          "bold"
+        );
+
+        doc.text(
+          "AI Insights:",
+          24,
+          currentY + 8
+        );
+
+        doc.setFont(
+          "helvetica",
+          "normal"
+        );
+
+        currentY += 14;
+
+        f.aiExplanation
+          .forEach((point: string) => {
+
+            const bullet =
+              doc.splitTextToSize(
+                `• ${point}`,
+                150
+              );
+
+            doc.text(
               bullet,
-              180
+              28,
+              currentY
             );
 
-          doc.text(splitBullet, 12, y);
-
-          y += splitBullet.length * 6;
-        });
+            currentY +=
+              bullet.length * 5 + 3;
+          });
       }
 
-      y += 8;
-
-      if (y > 260) {
-        doc.addPage();
-
-        y = 12;
-      }
+      y =
+        Math.max(
+          currentY + 10,
+          y + 65
+        );
     });
 
-    doc.save("medisafe-report.pdf");
+    // ================= FOOTER =================
+    const totalPages =
+      doc.getNumberOfPages();
+
+    for (
+      let i = 1;
+      i <= totalPages;
+      i++
+    ) {
+      doc.setPage(i);
+
+      doc.setFontSize(10);
+
+      doc.setTextColor(100);
+
+      doc.text(
+        `Generated by MediSafe AI • Page ${i} of ${totalPages}`,
+        14,
+        290
+      );
+    }
+
+    doc.save(
+      "medisafe-personalized-report.pdf"
+    );
   };
 
-  if (!report) return null;
+  if (!report) {
+    return (
+      <Layout>
+        <div className="container max-w-4xl py-12">
 
+          {/* BACK BUTTON SKELETON */}
+          <div className="h-5 w-32 animate-pulse rounded bg-muted/40" />
+
+          <div className="mt-8">
+
+            {/* HEADER */}
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+              <div className="space-y-3">
+                <div className="h-10 w-72 animate-pulse rounded-xl bg-muted/40" />
+
+                <div className="h-5 w-96 animate-pulse rounded-xl bg-muted/30" />
+              </div>
+
+              {/* USER CARD */}
+              <div className="rounded-2xl border bg-card px-5 py-4 shadow-sm">
+                <div className="flex items-center gap-3">
+
+                  <div className="h-12 w-12 animate-pulse rounded-full bg-primary/20" />
+
+                  <div className="space-y-2">
+                    <div className="h-4 w-24 animate-pulse rounded bg-muted/40" />
+                    <div className="h-3 w-16 animate-pulse rounded bg-muted/30" />
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            {/* SUMMARY */}
+            <div className="mt-6 rounded-2xl border bg-card p-5 shadow-sm">
+              <div className="h-5 w-40 animate-pulse rounded bg-muted/40" />
+
+              <div className="mt-4 space-y-2">
+                <div className="h-4 w-full animate-pulse rounded bg-muted/30" />
+                <div className="h-4 w-5/6 animate-pulse rounded bg-muted/30" />
+              </div>
+            </div>
+
+            {/* RISK SCORE */}
+            <div className="mt-8 rounded-2xl border bg-card p-7 shadow-sm">
+
+              <div className="flex items-center justify-between">
+
+                <div className="space-y-3">
+                  <div className="h-4 w-52 animate-pulse rounded bg-muted/40" />
+
+                  <div className="h-14 w-24 animate-pulse rounded-xl bg-muted/30" />
+                </div>
+
+                <div className="h-10 w-28 animate-pulse rounded-full bg-muted/40" />
+
+              </div>
+
+              <div className="mt-6 h-3 w-full overflow-hidden rounded-full bg-muted">
+                <div className="h-full w-1/2 animate-pulse rounded-full bg-primary/40" />
+              </div>
+
+            </div>
+
+            {/* PERSONALIZATION */}
+            <div className="mt-8 rounded-2xl border bg-card p-6 shadow-sm">
+
+              <div className="h-6 w-56 animate-pulse rounded bg-muted/40" />
+
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+
+                <div className="rounded-xl bg-muted/40 p-4">
+                  <div className="h-4 w-36 animate-pulse rounded bg-muted/50" />
+
+                  <div className="mt-3 h-5 w-40 animate-pulse rounded bg-muted/30" />
+                </div>
+
+                <div className="rounded-xl bg-muted/40 p-4">
+                  <div className="h-4 w-24 animate-pulse rounded bg-muted/50" />
+
+                  <div className="mt-3 h-5 w-32 animate-pulse rounded bg-muted/30" />
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* INTERACTION CARDS */}
+            <div className="mt-10 space-y-5">
+
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl border bg-card p-6 shadow-sm"
+                >
+
+                  <div className="flex items-center gap-3">
+
+                    <div className="h-12 w-12 animate-pulse rounded-full bg-muted/40" />
+
+                    <div className="space-y-2">
+                      <div className="h-5 w-40 animate-pulse rounded bg-muted/40" />
+
+                      <div className="h-4 w-56 animate-pulse rounded bg-muted/30" />
+                    </div>
+
+                    <div className="ml-auto space-y-2">
+                      <div className="h-3 w-24 animate-pulse rounded bg-muted/40" />
+
+                      <div className="h-8 w-12 animate-pulse rounded bg-muted/30" />
+                    </div>
+
+                  </div>
+
+                  <div className="mt-5 h-2 w-full animate-pulse rounded-full bg-muted/40" />
+
+                  <div className="mt-5 space-y-2">
+                    <div className="h-4 w-full animate-pulse rounded bg-muted/30" />
+                    <div className="h-4 w-5/6 animate-pulse rounded bg-muted/30" />
+                    <div className="h-4 w-4/6 animate-pulse rounded bg-muted/30" />
+                  </div>
+
+                  <div className="mt-5 rounded-xl bg-muted/20 p-4">
+                    <div className="h-4 w-32 animate-pulse rounded bg-muted/40" />
+
+                    <div className="mt-3 space-y-2">
+                      <div className="h-4 w-full animate-pulse rounded bg-muted/30" />
+                      <div className="h-4 w-5/6 animate-pulse rounded bg-muted/30" />
+                    </div>
+                  </div>
+
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+        </div>
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <div className="container max-w-4xl py-12">
@@ -342,32 +722,30 @@ const Report = () => {
               </div>
 
               <div
-                className={`rounded-full px-4 py-2 text-sm font-semibold ${
-                  report.riskScore >= 70
-                    ? "bg-red-100 text-red-700"
-                    : report.riskScore >= 40
+                className={`rounded-full px-4 py-2 text-sm font-semibold ${report.riskScore >= 70
+                  ? "bg-red-100 text-red-700"
+                  : report.riskScore >= 40
                     ? "bg-yellow-100 text-yellow-700"
                     : "bg-green-100 text-green-700"
-                }`}
+                  }`}
               >
                 {report.riskScore >= 70
                   ? "High Risk"
                   : report.riskScore >= 40
-                  ? "Moderate Risk"
-                  : "Low Risk"}
+                    ? "Moderate Risk"
+                    : "Low Risk"}
               </div>
             </div>
 
             {/* PROGRESS BAR */}
             <div className="mt-5 h-3 w-full overflow-hidden rounded-full bg-muted">
               <div
-                className={`h-3 rounded-full transition-all duration-700 ${
-                  report.riskScore >= 70
-                    ? "bg-red-500"
-                    : report.riskScore >= 40
+                className={`h-3 rounded-full transition-all duration-700 ${report.riskScore >= 70
+                  ? "bg-red-500"
+                  : report.riskScore >= 40
                     ? "bg-yellow-500"
                     : "bg-green-500"
-                }`}
+                  }`}
                 style={{
                   width: `${report.riskScore}%`,
                 }}
@@ -419,8 +797,8 @@ const Report = () => {
                 f.severity === "High"
                   ? AlertTriangle
                   : f.severity === "Medium"
-                  ? Info
-                  : CheckCircle;
+                    ? Info
+                    : CheckCircle;
 
               return (
                 <motion.div
@@ -438,13 +816,12 @@ const Report = () => {
                   {/* HEADER */}
                   <div className="flex items-center gap-3">
                     <div
-                      className={`rounded-full p-2 ${
-                        f.severity === "High"
-                          ? "bg-red-100 text-red-600"
-                          : f.severity === "Medium"
+                      className={`rounded-full p-2 ${f.severity === "High"
+                        ? "bg-red-100 text-red-600"
+                        : f.severity === "Medium"
                           ? "bg-yellow-100 text-yellow-600"
                           : "bg-green-100 text-green-600"
-                      }`}
+                        }`}
                     >
                       <Icon className="h-5 w-5" />
                     </div>
@@ -473,13 +850,12 @@ const Report = () => {
                   {/* BAR */}
                   <div className="mt-4 h-2 overflow-hidden rounded-full bg-muted">
                     <div
-                      className={`h-full rounded-full ${
-                        f.severity === "High"
-                          ? "bg-red-500"
-                          : f.severity === "Medium"
+                      className={`h-full rounded-full ${f.severity === "High"
+                        ? "bg-red-500"
+                        : f.severity === "Medium"
                           ? "bg-yellow-500"
                           : "bg-green-500"
-                      }`}
+                        }`}
                       style={{
                         width: `${Math.min(
                           f.score * 8,
@@ -564,34 +940,34 @@ const Report = () => {
                   {/* SAFER ALTERNATIVES */}
                   {f.saferAlternatives?.length >
                     0 && (
-                    <div className="mt-5 rounded-xl border border-green-200 bg-green-50 p-4">
-                      <p className="font-medium text-green-800">
-                        🔄 Safer Alternatives
-                      </p>
+                      <div className="mt-5 rounded-xl border border-green-200 bg-green-50 p-4">
+                        <p className="font-medium text-green-800">
+                          🔄 Safer Alternatives
+                        </p>
 
-                      <div className="mt-3 space-y-2">
-                        {f.saferAlternatives.map(
-                          (
-                            alt: any,
-                            idx: number
-                          ) => (
-                            <div
-                              key={idx}
-                              className="text-sm text-green-700"
-                            >
-                              <strong>
-                                {alt.original}
-                              </strong>{" "}
-                              →{" "}
-                              {alt.alternatives.join(
-                                ", "
-                              )}
-                            </div>
-                          )
-                        )}
+                        <div className="mt-3 space-y-2">
+                          {f.saferAlternatives.map(
+                            (
+                              alt: any,
+                              idx: number
+                            ) => (
+                              <div
+                                key={idx}
+                                className="text-sm text-green-700"
+                              >
+                                <strong>
+                                  {alt.original}
+                                </strong>{" "}
+                                →{" "}
+                                {alt.alternatives.join(
+                                  ", "
+                                )}
+                              </div>
+                            )
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
 
                   {/* RECOMMENDATION */}
                   <div className="mt-5 rounded-xl bg-primary/5 p-4 text-sm font-medium">

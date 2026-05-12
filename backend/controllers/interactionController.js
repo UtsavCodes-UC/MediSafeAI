@@ -3,6 +3,7 @@ const normalize = require("../utils/normalize");
 const { ageRisk } = require("../config/ageConfig.js");
 const generateAIExplanation = require("../utils/aiService");
 const { findBestMatch } = require("../utils/fuzzyMatch");
+const DashboardStats = require("../models/dashboardStats");
 
 const checkInteractions = async (req, res) => {
     try {
@@ -88,6 +89,22 @@ const checkInteractions = async (req, res) => {
                         effects: interaction.effects,
                         recommendation: interaction.recommendation,
                         aiExplanation: aiExplanation
+                    });
+
+                    await DashboardStats.create({
+                        items: [
+                            interaction.itemA,
+                            interaction.itemB
+                        ],
+
+                        severity:
+                            score >= 9
+                                ? "High"
+                                : score >= 5
+                                    ? "Medium"
+                                    : "Low",
+
+                        score,
                     });
                 }
             }

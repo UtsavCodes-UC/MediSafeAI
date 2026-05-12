@@ -186,6 +186,7 @@ const InteractionChecker = () => {
         }
       );
 
+
       setResults(
         formattedResults.length === 0
           ? []
@@ -398,13 +399,12 @@ const InteractionChecker = () => {
                     {/* SCORE BAR */}
                     <div className="mt-4 h-2 w-full rounded-full bg-black/10 overflow-hidden">
                       <div
-                        className={`h-full rounded-full ${
-                          r.severity === "High"
-                            ? "bg-red-500"
-                            : r.severity === "Medium"
+                        className={`h-full rounded-full ${r.severity === "High"
+                          ? "bg-red-500"
+                          : r.severity === "Medium"
                             ? "bg-yellow-500"
                             : "bg-green-500"
-                        }`}
+                          }`}
                         style={{
                           width: `${Math.min(
                             r.score * 8,

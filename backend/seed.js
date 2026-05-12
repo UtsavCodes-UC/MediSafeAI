@@ -1,3 +1,5 @@
+process.env.OPENSSL_CONF = '';
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const Interaction = require("./models/interactions.js");

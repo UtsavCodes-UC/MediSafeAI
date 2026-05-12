@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const buildDrugList = require("./utils/buildDrugList");
 const { initializeFuzzy } = require("./utils/fuzzyMatch");
 const interactionRoutes = require("./routes/interactionRoutes");
-
+const dashboardRoutes = require("./routes/dashboardRoutes");
 dotenv.config();
 
 const connectDB = require("./config/db");
@@ -28,8 +28,11 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
+app.use("/api/dashboard", dashboardRoutes);
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
 
 app.use("/api/interactions", interactionRoutes);
